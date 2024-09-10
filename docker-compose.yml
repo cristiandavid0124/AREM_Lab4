@@ -1,0 +1,60 @@
+version: '1'
+
+services:
+  logservice1:
+    image: angiemojica/arep-lab06-servicelog
+    container_name: logservice1
+    ports:
+      - "35001:35000"
+    networks:
+      - mynetarep
+  
+  logservice2:
+    image: angiemojica/arep-lab06-servicelog
+    container_name: logservice2
+    ports:
+      - "35002:35000"
+    networks:
+      - mynetarep
+
+  logservice3:
+    image: angiemojica/arep-lab06-servicelog
+    container_name: logservice3
+    ports:
+      - "35003:35000"
+    networks:
+      - mynetarep
+
+  mongodb:
+    image: mongo:3.6.1
+    container_name: db
+    volumes:
+      - mongodb:/data/db
+      - mongodb_config:/data/configdb
+    ports:
+      - 27017:27017
+    networks:
+      - mynetarep
+  
+  webapp:
+    image: angiemojica/arep-lab06-app
+    container_name: webapp
+    ports:
+      - "38000:46000"
+    networks:
+      - mynetarep
+    depends_on:
+      - logservice1
+      - logservice2
+      - logservice3
+      - mongodb
+    
+networks:
+  mynetarep:
+
+volumes:
+  mongodb:
+  mongodb_config:
+
+
+    
