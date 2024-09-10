@@ -2,7 +2,7 @@ version: '1'
 
 services:
   logservice1:
-    image: angiemojica/arep-lab06-servicelog
+    image: cristindavid0124/arep-lab04-servicelog
     container_name: logservice1
     ports:
       - "35001:35000"
@@ -10,7 +10,7 @@ services:
       - mynetarep
   
   logservice2:
-    image: angiemojica/arep-lab06-servicelog
+    image: cristindavid0124/arep-lab04-servicelog
     container_name: logservice2
     ports:
       - "35002:35000"
@@ -18,7 +18,7 @@ services:
       - mynetarep
 
   logservice3:
-    image: angiemojica/arep-lab06-servicelog
+    image: cristindavid0124/arep-lab04-servicelog
     container_name: logservice3
     ports:
       - "35003:35000"
@@ -37,7 +37,7 @@ services:
       - mynetarep
   
   webapp:
-    image: angiemojica/arep-lab06-app
+    image: cristindavid0124/taller4_arep
     container_name: webapp
     ports:
       - "38000:46000"
