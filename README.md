@@ -94,7 +94,13 @@ cd AREM_Lab4
 docker-compose up
 ```
 Una vez que los contenedores se han iniciado, se puede acceder a la aplicación web en la dirección IP pública de la instancia en el puerto 38000. A continuación, se muestra el resultado de la aplicación web en funcionamiento:
-https://github.com/user-attachments/assets/5ac947f9-5525-43e5-806a-d738e747ae1d
+
+
+
+
+https://github.com/user-attachments/assets/44474814-c962-435f-bbbb-c3fe1bc769d1
+
+
 
 
 
