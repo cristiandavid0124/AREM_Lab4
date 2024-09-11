@@ -12,7 +12,7 @@ Los principales componentes de la aplicación son:
 ## Arquitectura
 
 El objetivo del taller es implementar la siguiente arquitectura en AWS utilizando contenedores de Docker y servicios de AWS:
-
+![imagen](https://github.com/user-attachments/assets/58c308f5-c73d-4c87-9476-b4fde445ae86)
 
 Se realiza la configuración correspondiente en el archivo `docker-compose.yml` este archivo define una infraestructura compuesta por varios servicios interconectados que trabajan juntos para proporcionar una aplicación web que registra logs en una base de datos MongoDB, utilizando contenedores Docker para la fácil gestión y despliegue de los componentes. Se definen los siguientes servicios:
 
@@ -58,7 +58,7 @@ Para desplegar la aplicación en un entorno local, se utiliza Docker Compose par
 # Clona el repositorio de la aplicación
 git clone https://github.com/cristiandavid0124/AREM_Lab4.git
 # Cambia al directorio del repositorio
-cd AREP-TALLER-06
+cd AREM_Lab4 
 # Inicia los contenedores de la aplicación
 docker-compose up
 ```
