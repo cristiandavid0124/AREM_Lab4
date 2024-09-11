@@ -1,4 +1,4 @@
-version: '1'
+version: '3.8'
 
 services:
   logservice1:
@@ -32,7 +32,7 @@ services:
       - mongodb:/data/db
       - mongodb_config:/data/configdb
     ports:
-      - 27017:27017
+      - "27017:27017"
     networks:
       - mynetarep
   
@@ -48,13 +48,11 @@ services:
       - logservice2
       - logservice3
       - mongodb
-    
+
 networks:
   mynetarep:
+    driver: bridge
 
 volumes:
   mongodb:
   mongodb_config:
-
-
-    
