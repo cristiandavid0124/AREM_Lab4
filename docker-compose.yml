@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.3'
 
 services:
   logservice1:
@@ -8,7 +8,7 @@ services:
       - "35001:35000"
     networks:
       - mynetarep
-  
+
   logservice2:
     image: cristindavid0124/arep-lab04-servicelog
     container_name: logservice2
@@ -35,7 +35,7 @@ services:
       - "27017:27017"
     networks:
       - mynetarep
-  
+
   webapp:
     image: cristindavid0124/taller4_arep
     container_name: webapp
