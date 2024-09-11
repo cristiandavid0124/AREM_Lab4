@@ -46,7 +46,9 @@ docker build -f .\Dockerfiles\Dockerfile2 -t dockerlogservice .
 docker tag dockerlogservice cristindavid0124/arep-lab04-servicelog
 # Subir la imagen al repositorio de Docker Hub
 docker push cristindavid0124/arep-lab04-servicelog
+
 ```
+![imagen](https://github.com/user-attachments/assets/dda6e4db-6d4f-472b-8150-631a9ee228cf)
 
 Los Dockerfile (1 App, 2 Logs) definen las instrucciones para construir las imágenes Docker que ejecutará una aplicación Java. Utiliza OpenJDK 17 como la imagen base, configura el directorio de trabajo y una variable de entorno para el puerto. Luego, copia los archivos de clases y las dependencias de la aplicación al contenedor. Finalmente, especifica el comando java para iniciar la aplicación al iniciar el contenedor.
 
@@ -61,18 +63,31 @@ git clone https://github.com/cristiandavid0124/AREM_Lab4.git
 cd AREM_Lab4 
 # Inicia los contenedores de la aplicación
 docker-compose up
+![imagen](https://github.com/user-attachments/assets/79cf9dfb-1d2a-4eb9-847b-698e5acf2250)
+
 ```
 
 > [!IMPORTANT]
 > Es necesario tener iniciado Docker-Dekstop para poder ejecutar los comandos anteriores.
 
 Una vez que los contenedores se han iniciado, se puede acceder a la aplicación web en la dirección [http://localhost:38000](http://localhost:38000).
+![imagen](https://github.com/user-attachments/assets/198670e9-8a43-4afd-9e94-0c8bedcd7543)
+
 
 ## Despliegue en AWS
 
 Se ha creado una instancia EC2 en AWS para desplegar la aplicación. La instancia se ha configurado con una dirección IP pública y se ha habilitado el tráfico de entrada en los puertos 22 y 38000. Además, se ha instalado Docker y Docker Compose en la instancia para poder ejecutar los contenedores de la aplicación y se ha instalado Git para clonar el repositorio de la aplicación que contiene el archivo `docker-compose.yml`.
 
-El resumen de comandos para desplegar la aplicación en la instancia EC2 es el siguiente:
+![imagen](https://github.com/user-attachments/assets/3cd43447-887d-4747-9139-31e9c360af9b)
+
+nos conectamos con ssh decargando el archivo guardandolo en una carpeta y con la consola usamos el comando ssh para iniciar la maquina
+![imagen](https://github.com/user-attachments/assets/ddf6b5e5-ad01-443a-90ce-b7bfae89c182)
+
+![imagen](https://github.com/user-attachments/assets/05cc924c-1d96-452c-b94c-5e0c902e6e6d)
+
+
+
+despues usamos los comandos para desplegar la aplicación en la instancia EC2 es el siguiente:
 
 ```bash
 # Actualizar el sistema
