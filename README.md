@@ -63,9 +63,9 @@ git clone https://github.com/cristiandavid0124/AREM_Lab4.git
 cd AREM_Lab4 
 # Inicia los contenedores de la aplicación
 docker-compose up
-![imagen](https://github.com/user-attachments/assets/79cf9dfb-1d2a-4eb9-847b-698e5acf2250)
 
 ```
+![imagen](https://github.com/user-attachments/assets/79cf9dfb-1d2a-4eb9-847b-698e5acf2250)
 
 > [!IMPORTANT]
 > Es necesario tener iniciado Docker-Dekstop para poder ejecutar los comandos anteriores.
